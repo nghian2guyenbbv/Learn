@@ -1,6 +1,5 @@
-package com.example.SpringSecurity.autowrride;
+package com.example.SpringSecurity.autowride;
 
-import lombok.*;
 import org.springframework.stereotype.Component;
 
 @Component

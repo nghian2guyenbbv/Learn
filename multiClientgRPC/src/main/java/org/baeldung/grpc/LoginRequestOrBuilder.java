@@ -26,4 +26,14 @@ public interface LoginRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
+
+  /**
+   * <code>string myRole = 3;</code>
+   */
+  java.lang.String getMyRole();
+  /**
+   * <code>string myRole = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getMyRoleBytes();
 }

@@ -34,11 +34,12 @@ public final class LoginServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\022loginService.proto\022\021org.baeldung.grpc\"" +
-      ".\n\014LoginRequest\022\014\n\004user\030\001 \001(\t\022\020\n\010passwor" +
-      "d\030\002 \001(\t\"(\n\rLoginResponse\022\027\n\017messageRespo" +
-      "nse\030\001 \001(\t2Z\n\014LoginService\022J\n\005login\022\037.org" +
-      ".baeldung.grpc.LoginRequest\032 .org.baeldu" +
-      "ng.grpc.LoginResponseB\002P\001b\006proto3"
+      ">\n\014LoginRequest\022\014\n\004user\030\001 \001(\t\022\020\n\010passwor" +
+      "d\030\002 \001(\t\022\016\n\006myRole\030\003 \001(\t\"(\n\rLoginResponse" +
+      "\022\027\n\017messageResponse\030\001 \001(\t2Z\n\014LoginServic" +
+      "e\022J\n\005login\022\037.org.baeldung.grpc.LoginRequ" +
+      "est\032 .org.baeldung.grpc.LoginResponseB\002P" +
+      "\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,7 +58,7 @@ public final class LoginServiceOuterClass {
     internal_static_org_baeldung_grpc_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_org_baeldung_grpc_LoginRequest_descriptor,
-        new java.lang.String[] { "User", "Password", });
+        new java.lang.String[] { "User", "Password", "MyRole", });
     internal_static_org_baeldung_grpc_LoginResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_org_baeldung_grpc_LoginResponse_fieldAccessorTable = new

@@ -5,6 +5,7 @@ package org.baeldung.grpc;
 message LoginRequest{
     string user = 1;
     string password = 2;
+    string myRole =3;
 }
 
 message LoginResponse{

@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RedisService {
     @Autowired
@@ -38,5 +40,30 @@ public class RedisService {
         }
         return result;
 
+    }
+    public boolean saveListToRedis(String key,List listVale){
+        boolean result = false;
+        try{
+            redisTemplate.opsForList().rightPushAll(key, listVale);
+            result = true;
+        }catch(Exception ex){
+            result = false;
+            ex.printStackTrace();
+        }
+        return  result;
+    }
+    public List<String> getListStringRedis(String argKey){
+        List<String> resultlist = null;
+        try{
+            resultlist =  redisTemplate.opsForList().range(argKey, 0, -1);
+
+        }catch (NullPointerException ex){
+            System.out.println("Not found "+argKey+" list in redis");
+        }
+        catch(Exception ex){
+
+            ex.printStackTrace();
+        }
+        return  resultlist;
     }
 }
